@@ -3,7 +3,8 @@ import java.util.EmptyStackException;
 import java.util.List;
 
 /**
- * Class that holds every method related to the creation and modification of Stacks.
+ * Class that holds every method related to the creation and modification of
+ * Stacks.
  *
  * @author zkac249
  *
@@ -11,6 +12,13 @@ import java.util.List;
 public class Stack {
   int size = 0;
   private List<Entry> entries = new ArrayList<>();
+
+  /**
+   * Creates empty Stack object.
+   */
+  public Stack() {
+
+  }
 
   /**
    * Called to return the size of the Stack.
@@ -35,8 +43,8 @@ public class Stack {
   }
 
   /**
-   * Called to return then remove the last added entry. It also checks and throws and exception if
-   * this is called on an empty stack.
+   * Called to return then remove the last added entry. It also checks and throws
+   * and exception if this is called on an empty stack.
    *
    * @return returns the last entry that was added
    */
