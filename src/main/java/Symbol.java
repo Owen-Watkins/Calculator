@@ -25,7 +25,7 @@ public enum Symbol {
    */
   PLUS,
   /**
-   * Sumbtraction symbol : -.
+   * Subtraction symbol : -.
    */
   MINUS,
   /**
