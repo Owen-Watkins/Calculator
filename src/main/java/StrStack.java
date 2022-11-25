@@ -1,31 +1,30 @@
 /**
- * This is the class for OpStack.
+ * This is the class for StrStack.
  *
  * @author Owen
  *
  */
-public class OpStack {
-  Stack opStack = new Stack();
-  Symbol size;
+public class StrStack {
+  Stack strStack = new Stack();
 
   /**
-   * Finds size of OpStack object by returning value from size() method of Stack
+   * Finds size of StrStack object by returning value from size() method of Stack
    * class.
    *
    * @return int value representing size of stack
    */
   public int size() {
-    return opStack.size();
+    return strStack.size();
   }
 
   /**
-   * Pushes an Entry with Symbol value into the stack.
+   * Pushes an Entry with string value into the stack.
    *
    * @param i Value to be added as entry into stack.
    */
-  public void push(Symbol i) {
+  public void push(String i) {
     Entry entry = new Entry(i);
-    opStack.push(entry);
+    strStack.push(entry);
 
   }
 
@@ -33,11 +32,11 @@ public class OpStack {
    * Pops last added entry into the Stack.
    *
    * @return The last added Stack.
-   * @throws BadTypeException Thrown if type returned is not Symbol.
+   * @throws BadTypeException Thrown if type returned is not a string.
    *
    */
-  public Symbol pop() throws BadTypeException {
-    return opStack.pop().getSymbol();
+  public String pop() throws BadTypeException {
+    return strStack.pop().getString();
   }
 
   /**
@@ -46,7 +45,7 @@ public class OpStack {
    * @return boolean for whether Stack is empty, i.e. true for an empty stack.
    */
   public boolean isEmpty() {
-    if (opStack.size() > 0) {
+    if (strStack.size() > 0) {
       return false;
     }
     return true;
