@@ -6,7 +6,7 @@
  */
 public class NumStack {
   Stack numStack = new Stack();
-  float size;
+  int size;
 
   /**
    * Finds size of NumStack object by returning value from size() method of Stack
@@ -14,7 +14,7 @@ public class NumStack {
    *
    * @return float value representing size of stack
    */
-  public float size() {
+  public int size() {
     return numStack.size();
   }
 
@@ -51,6 +51,11 @@ public class NumStack {
     }
     return true;
 
+  }
+  
+  public float getFloat(int i) throws BadTypeException {
+    return numStack.entries.get(i).getValue();
+    
   }
 
 }

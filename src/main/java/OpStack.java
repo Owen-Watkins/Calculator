@@ -6,7 +6,7 @@
  */
 public class OpStack {
   Stack opStack = new Stack();
-  Symbol size;
+  int size;
 
   /**
    * Finds size of OpStack object by returning value from size() method of Stack
@@ -51,6 +51,17 @@ public class OpStack {
     }
     return true;
 
+  }
+  
+  /**
+   * Get a specific entry from the stack.
+   *
+   * @throws BadTypeException q.
+   * 
+   */
+  public Symbol getSymbol(int i) throws BadTypeException {
+    return opStack.entries.get(i).getSymbol();
+    
   }
 
 }
