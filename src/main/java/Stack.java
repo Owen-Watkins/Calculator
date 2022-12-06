@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class Stack {
   int size = 0;
-  private List<Entry> entries = new ArrayList<>();
+  public List<Entry> entries = new ArrayList<>();
 
   /**
    * Creates empty Stack object.
