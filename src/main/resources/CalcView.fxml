@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CalcGuiView">
+   <children>
+      <Button fx:id="calculateButton" layoutX="268.0" layoutY="149.0" mnemonicParsing="false" onAction="#OnCalculatePress" text="Calculate" />
+      <RadioButton fx:id="revPolCalcButton" contentDisplay="CENTER" layoutX="220.0" layoutY="200.0" mnemonicParsing="false" onAction="#onRevPolButtonPress" text="Reverse Polish Calcualtion" />
+      <TextField fx:id="textField" alignment="CENTER" layoutX="226.0" layoutY="80.0" promptText="Enter Calculation here" />
+   </children>
+</Pane>
