@@ -6,23 +6,23 @@ import javafx.scene.control.TextField;
 
 public class CalcGuiView {
 
-	@FXML
-	private Button calculateButton;
+    @FXML
+    private Button calculateButton;
 
-	@FXML
-	private RadioButton revPolCalcButton;
+    @FXML
+    private RadioButton revPolCalcButton;
 
-	@FXML
-	private TextField textField;
+    @FXML
+    private TextField textField;
 
-	@FXML
-	void OnCalculatePress(ActionEvent event) {
+    @FXML
+    void onCalculatePress(ActionEvent event) {
 
-	}
+    }
 
-	@FXML
-	void onRevPolButtonPress(ActionEvent event) {
+    @FXML
+    void onRevPolButtonPress(ActionEvent event) {
 
-	}
+    }
 
 }
