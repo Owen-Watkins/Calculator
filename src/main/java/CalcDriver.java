@@ -1,8 +1,3 @@
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 
 /**
  * D.
@@ -10,20 +5,15 @@ import javafx.stage.Stage;
  * @author Owen.
  *
  */
-public class CalcDriver extends Application {
+public class CalcDriver {
 
   public static void main(String[] args) {
-    launch(args);
-
+    ViewInterface view = new AsciiView();
+    CalcModel model = new CalcModel();
+    if (System.console() == null) {
+      view = CalcGuiView.getInstance();
+    }
+    new CalcController(model, view);
+    view.menu();
   }
-
-  @Override
-  public void start(Stage primaryStage) throws Exception {
-    Pane pane = FXMLLoader.load(getClass().getResource("CalcView.fxml"));
-    Scene scene = new Scene(pane, 800, 800);
-    primaryStage.setScene(scene);
-    primaryStage.show();
-
-  }
-
 }
