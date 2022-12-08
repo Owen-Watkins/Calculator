@@ -3,14 +3,18 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 
 public class CalcGuiView {
 
     @FXML
-    private Button calculateButton;
+    private Button buttonCalculate;
 
     @FXML
-    private RadioButton revPolCalcButton;
+    private RadioButton buttonRevPol;
+
+    @FXML
+    private GridPane gridPane;
 
     @FXML
     private TextField textField;
@@ -21,7 +25,7 @@ public class CalcGuiView {
     }
 
     @FXML
-    void onRevPolButtonPress(ActionEvent event) {
+    void onRevPolPress(ActionEvent event) {
 
     }
 
