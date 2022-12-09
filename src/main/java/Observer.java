@@ -1,4 +1,4 @@
 @FunctionalInterface
 public interface Observer {
-    public void notifyObservers();
+  public void notifyObservers();
 }

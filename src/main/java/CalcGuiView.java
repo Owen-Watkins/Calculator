@@ -10,77 +10,77 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class CalcGuiView extends Application implements ViewInterface{
+public class CalcGuiView extends Application implements ViewInterface {
 
-    @FXML
-    private Button buttonCalculate = null;
+  @FXML
+  private Button buttonCalculate = null;
 
-    @FXML
-    private RadioButton buttonRevPol;
+  @FXML
+  private RadioButton buttonRevPol;
 
-    @FXML
-    private GridPane gridPane;
+  @FXML
+  private GridPane gridPane;
 
-    @FXML
-    private TextField textField;
+  @FXML
+  private TextField textField;
 
-    private volatile static CalcGuiView instance = null;
+  private volatile static CalcGuiView instance = null;
 
-    @FXML
-    void initialize() {
-      instance = this;
-    }
+  @FXML
+  void initialize() {
+    instance = this;
+  }
 
-    public synchronized static CalcGuiView getInstance() {
-      if (instance == null) {
-        new Thread(() -> Application.launch(CalcGuiView.class)).start();
-        while (instance == null) {
-        }
+  public synchronized static CalcGuiView getInstance() {
+    if (instance == null) {
+      new Thread(() -> Application.launch(CalcGuiView.class)).start();
+      while (instance == null) {
       }
-
-      return instance;
-    }
-    
-    @FXML
-    void onCalculatePress(ActionEvent event) {
-
     }
 
-    @FXML
-    void onRevPolPress(ActionEvent event) {
+    return instance;
+  }
 
-    }
+  @FXML
+  void onCalculatePress(ActionEvent event) {
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-      Pane pane = FXMLLoader.load(getClass().getResource("CalcView.fxml"));
-      Scene scene = new Scene(pane, 800, 800);
-      primaryStage.setScene(scene);
-      primaryStage.show();
+  }
 
-    }
+  @FXML
+  void onRevPolPress(ActionEvent event) {
 
-    @Override
-    public void addCalculateObserver(Observer c) {
-      buttonCalculate.setOnAction(event -> c.notifyObservers());
-      
-    }
+  }
 
-    @Override
-    public String getUserInput() {
-      return textField.getText();
-    }
+  @Override
+  public void start(Stage primaryStage) throws Exception {
+    Pane pane = FXMLLoader.load(getClass().getResource("CalcView.fxml"));
+    Scene scene = new Scene(pane, 800, 800);
+    primaryStage.setScene(scene);
+    primaryStage.show();
 
-    @Override
-    public void menu() {
-      buttonCalculate.setDisable(false);
-      
-    }
+  }
 
-    @Override
-    public void setTotal(String value) {
-      textField.setText(value);
-      
-    }
+  @Override
+  public void addCalculateObserver(Observer c) {
+    buttonCalculate.setOnAction(event -> c.notifyObservers());
+
+  }
+
+  @Override
+  public String getUserInput() {
+    return textField.getText();
+  }
+
+  @Override
+  public void menu() {
+    buttonCalculate.setDisable(false);
+
+  }
+
+  @Override
+  public void setTotal(String value) {
+    textField.setText(value);
+
+  }
 
 }

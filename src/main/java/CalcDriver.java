@@ -1,10 +1,3 @@
-
-/**
- * D.
- *
- * @author Owen.
- *
- */
 public class CalcDriver {
 
   public static void main(String[] args) {

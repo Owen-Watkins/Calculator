@@ -48,7 +48,7 @@ public class AsciiView implements ViewInterface {
 
   @Override
   public void setTotal(String value) {
-    
+
   }
 
 
