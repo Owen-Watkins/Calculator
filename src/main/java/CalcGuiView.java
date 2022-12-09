@@ -1,3 +1,4 @@
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -63,7 +64,7 @@ public class CalcGuiView extends Application implements ViewInterface {
   }
 
   @Override
-  public void start(Stage primaryStage) throws Exception {
+  public void start(Stage primaryStage) throws IOException{
     Pane pane = FXMLLoader.load(getClass().getResource("CalcView.fxml"));
     Scene scene = new Scene(pane, 800, 800);
     primaryStage.setScene(scene);

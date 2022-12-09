@@ -10,4 +10,6 @@ public class CalcModel {
   public String getValue() {
     return String.valueOf(answer);
   }
+  
+  
 }
