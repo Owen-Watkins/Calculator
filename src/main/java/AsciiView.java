@@ -1,9 +1,19 @@
 import java.util.Scanner;
 
+/**
+ * This is the view class for the console version of the calculator.
+ *
+ * @author Owen
+ *
+ */
 public class AsciiView implements ViewInterface {
   private String question;
   Observer calc = null;
 
+  /**
+   * Handles the menu functions.
+   * 
+   */
   public void menu() {
     Scanner scanner = new Scanner(System.in);
     boolean finished = false;
@@ -50,6 +60,5 @@ public class AsciiView implements ViewInterface {
   public void setTotal(String value) {
 
   }
-
 
 }

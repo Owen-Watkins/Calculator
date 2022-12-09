@@ -10,6 +10,12 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+/**
+ * This class handles the Gui view for the calculator.
+ *
+ * @author Owen
+ *
+ */
 public class CalcGuiView extends Application implements ViewInterface {
 
   @FXML
@@ -24,14 +30,19 @@ public class CalcGuiView extends Application implements ViewInterface {
   @FXML
   private TextField textField;
 
-  private volatile static CalcGuiView instance = null;
+  private static volatile CalcGuiView instance = null;
 
   @FXML
   void initialize() {
     instance = this;
   }
 
-  public synchronized static CalcGuiView getInstance() {
+  /**
+   * Gets the instance of GuiView, or creates a new one.
+   *
+   * @return instance of CalcGuiView.
+   */
+  public static synchronized CalcGuiView getInstance() {
     if (instance == null) {
       new Thread(() -> Application.launch(CalcGuiView.class)).start();
       while (instance == null) {
